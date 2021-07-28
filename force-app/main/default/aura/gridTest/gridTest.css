@@ -1,0 +1,81 @@
+.THIS .rhcard {
+   overflow-y: scroll;
+   margin: 5px 5px;
+   height: 300px;
+}
+
+.THIS .gridcell {
+   padding: 1px;
+   margin: 1px;
+   background-color: lightgreen;
+   width: 300px;
+   min-width: 300px;
+}
+
+.THIS .stickycell_a {
+   position: sticky;
+   left: 0;
+   background-color: pink;
+   z-index: 40;
+}
+
+.THIS .stickycell_b {
+   position: sticky;
+   left: 300px;
+   background-color: pink;
+   z-index: 40;
+}
+
+.THIS .stickycell_c {
+   position: sticky;
+   left: 600px;
+   background-color: pink;
+   z-index: 40;
+}
+
+.THIS .headercell {
+   background-color: green;
+   z-index: 60;
+}
+
+.THIS .stickyheadercell_a {
+   position: sticky;
+   left: 0;
+   background-color: hotpink;
+   z-index: 70;
+}
+
+.THIS .stickyheadercell_b {
+   position: sticky;
+   left: 300px;
+   background-color: hotpink;
+   z-index: 70;
+}
+
+.THIS .stickyheadercell_c {
+   position: sticky;
+   left: 600px;
+   background-color: hotpink;
+   z-index: 70;
+}
+
+.THIS .headerrow {
+   position: sticky;
+   top: 0;
+   background-color: tan;
+   z-index: 70;
+}
+
+.THIS .slds-datepicker {
+   position: fixed !important;
+   top: 0px;
+}
+
+.THIS .layoutrow {
+   background-color: tan;
+   padding: 3px;
+}
+
+.THIS .stickyfield * {
+   z-index: 90000;
+}

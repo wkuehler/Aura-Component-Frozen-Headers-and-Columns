@@ -1,0 +1,62 @@
+<template>
+   <lightning-card class="slds-is-relative">
+      <aura:set attribute="title">
+         <div aura:id="singlerecordheader_name">Manage Assignments</div>
+      </aura:set>
+
+      <div class="rhcard slds-scrollable_x slds-scrollable_y">
+         <lightning-layout multipleRows="true">
+            <lightning-layout-item class="headerrow">
+               <lightning-layout>
+                  <lightning-layout-item class="gridcell headercell stickyheadercell_a">
+                     <div>Column a</div>
+                  </lightning-layout-item>
+                  <lightning-layout-item class="gridcell headercell stickyheadercell_b">
+                     <div>Date field using ui:inputDate</div>
+                  </lightning-layout-item>
+                  <lightning-layout-item class="gridcell headercell stickyheadercell_c">
+                     <div>Date field using lightning-input type=date</div>
+                  </lightning-layout-item>
+                  <aura:iteration items="d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z" var="item">
+                     <lightning-layout-item class="gridcell headercell">
+                        <div>Column {!item}</div>
+                     </lightning-layout-item>
+                  </aura:iteration>
+               </lightning-layout>
+            </lightning-layout-item>
+
+            <aura:iteration items="1,2,3,4,5,6,7,8,9,10,11,12,13,14,15" var="item">
+               <lightning-layout-item class="layoutrow">
+                  <lightning-layout>
+                     <lightning-layout-item class="gridcell stickycell_a">
+                        <lightning-input name="input1" variant="label-hidden" />
+                     </lightning-layout-item>
+                     <lightning-layout-item class="gridcell stickycell_b">
+                        <ui:inputDate aura:id="expdate" value="{!v.today}" displayDatePicker="true" class="" />
+                     </lightning-layout-item>
+                     <lightning-layout-item class="gridcell stickycell_c">
+                        <lightning-input type="date" name="input1" label="Enter a date" variant="label-hidden" class="stickyfield" />
+                     </lightning-layout-item>
+
+                     <template for:each={accounts.data} for:item="acc">
+                        <p key={acc.Id}>{acc.Name}</p>
+                     </template>
+
+                     <aura:iteration items="d,e,f,g,h,i,j,k,l,m" var="item">
+                        <lightning-layout-item class="gridcell">
+                           <lightning-input type="date" name="input1" label="Enter a date" variant="label-hidden" />
+                        </lightning-layout-item>
+                     </aura:iteration>
+
+                     <aura:iteration items="n,o,p,q,r,s,t,u,v,w,x,y,z" var="item">
+                        <lightning-layout-item class="gridcell">
+                           <lightning-input name="input1" variant="label-hidden" />
+                        </lightning-layout-item>
+                     </aura:iteration>
+                  </lightning-layout>
+               </lightning-layout-item>
+            </aura:iteration>
+         </lightning-layout>
+      </div>
+   </lightning-card>
+</template>

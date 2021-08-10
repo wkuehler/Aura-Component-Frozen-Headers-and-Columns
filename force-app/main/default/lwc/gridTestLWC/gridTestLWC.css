@@ -1,0 +1,81 @@
+.rhcard {
+   overflow-y: scroll;
+   margin: 5px 5px;
+   height: 300px;
+}
+
+.gridcell {
+   padding: 1px;
+   margin: 1px;
+   background-color: lightgreen;
+   width: 300px;
+   min-width: 300px;
+}
+
+.stickycell_a {
+   position: sticky;
+   left: 0;
+   background-color: pink;
+   z-index: 40;
+}
+
+.stickycell_b {
+   position: sticky;
+   left: 300px;
+   background-color: pink;
+   z-index: 40;
+}
+
+.stickycell_c {
+   position: sticky;
+   left: 600px;
+   background-color: pink;
+   z-index: 40;
+}
+
+.headercell {
+   background-color: green;
+   z-index: 60;
+}
+
+.stickyheadercell_a {
+   position: sticky;
+   left: 0;
+   background-color: hotpink;
+   z-index: 70;
+}
+
+.stickyheadercell_b {
+   position: sticky;
+   left: 300px;
+   background-color: hotpink;
+   z-index: 70;
+}
+
+.stickyheadercell_c {
+   position: sticky;
+   left: 600px;
+   background-color: hotpink;
+   z-index: 70;
+}
+
+.headerrow {
+   position: sticky;
+   top: 0;
+   background-color: tan;
+   z-index: 70;
+}
+
+.slds-datepicker {
+   position: fixed !important;
+   top: 0px;
+}
+
+.layoutrow {
+   background-color: tan;
+   padding: 3px;
+}
+
+.stickyfield * {
+   z-index: 90000;
+}
